@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int CompareStr(char* str_1, char* str_2);
-void ChangeStr(char* str_1, char* str_2);
 
 int main()
 {
@@ -21,12 +21,10 @@ int main()
                          "When the devil will take you",
                          };
 
-    int* n_sent[14] = {};
+    char* n_sent[14] = {};
 
     for (int w = 0; w < 14; w++)
-        {
-        n_sent[w] = (int*) (text + w);
-        }
+        n_sent[w] = (char*) (text + w);
 
     for (int i = 0; i < 14; i++)
     {
@@ -34,23 +32,15 @@ int main()
         {
             if (CompareStr ((char*) n_sent[j], (char*) n_sent[j+1]) == 0)
                 {
-                    int* c = n_sent[j];
+                    char* c = (char*) n_sent[j];
                     n_sent[j] = n_sent[j+1];
-                    n_sent[j+1] = c;
+                    n_sent[j+1] = (char*) c;
                 }
         }
     }
 
     for (int y = 0; y < 14; y++)
-        {
-        int u = 0;
-        while (*((int*) (size_t (n_sent[y]) + u * sizeof(char))) != '\0')
-        {
-            putchar (*((int*) (size_t (n_sent[y]) + u * sizeof(char))));
-            u++;
-        }
-        putchar ('\n');
-        }    
+        puts (n_sent[y]);  
 }
 
 int CompareStr(char* str_1, char* str_2)
@@ -58,8 +48,7 @@ int CompareStr(char* str_1, char* str_2)
     int i = 0;
     while (str_1[i] != '\0' and str_2[i] != '\0')
     {
-        if (str_1[i] != ',' and str_1[i] != '-' and str_1[i] != ' ' and
-            str_2[i] != ',' and str_2[i] != '-' and str_2[i] != ' ')
+        if (isalpha (str_1[i]) and isalpha (str_2[i]))
             {
                 if (str_1[i] > str_2[i])
                     return 0;
@@ -71,19 +60,6 @@ int CompareStr(char* str_1, char* str_2)
     return -1;
 }
 
-void ChangeStr(char* str_1, char* str_2)
-{
-    char change = 0;
-    int i = 0;
-    while (1)
-    {
-        change = str_1[i];
-        str_1[i] = str_2[i];
-        str_2[i] = change;
-        i++;
-        if (str_1[i] == '\0' and str_2[i] == '\0')
-            break;
-    }
-}
+
 
     
