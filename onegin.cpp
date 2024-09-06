@@ -1,5 +1,5 @@
 #include <stdio.h>
-// создание доп массива, чтобы не менять строки места, а менять их порядок в дополнительном массиве
+
 int CompareStr(char* str_1, char* str_2);
 void ChangeStr(char* str_1, char* str_2);
 
@@ -21,15 +21,20 @@ int main()
                          "When the devil will take you",
                          };
 
-    int n_sent[14] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    int* n_sent[14] = {};
+
+    for (int w = 0; w < 14; w++)
+        {
+        n_sent[w] = (int*) (text + w);
+        }
 
     for (int i = 0; i < 14; i++)
     {
         for (int j = 0; j < 13; j++)
         {
-            if (CompareStr (text[n_sent[j]], text[n_sent[j+1]]) == 0)
+            if (CompareStr ((char*) n_sent[j], (char*) n_sent[j+1]) == 0)
                 {
-                    int c = n_sent[j];
+                    int* c = n_sent[j];
                     n_sent[j] = n_sent[j+1];
                     n_sent[j+1] = c;
                 }
@@ -37,9 +42,15 @@ int main()
     }
 
     for (int y = 0; y < 14; y++)
-        printf ("%s\n", text[n_sent[y]]);
-
-    
+        {
+        int u = 0;
+        while (*((int*) (size_t (n_sent[y]) + u * sizeof(char))) != '\0')
+        {
+            putchar (*((int*) (size_t (n_sent[y]) + u * sizeof(char))));
+            u++;
+        }
+        putchar ('\n');
+        }    
 }
 
 int CompareStr(char* str_1, char* str_2)
