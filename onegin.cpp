@@ -1,34 +1,29 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <locale.h>
 
 int CompareStr(char* str_1, char* str_2);
 
 int main()
 {
-    char text[14][50] = {"My uncle has the most honest rules",
-                         "When he was seriously ill,",
-                         "He forced himself to respect himself",
-                         "And I couldn't have invented a better one",
-                         "His example to others is science",
-                         "But, my God, what a bore",
-                         "Sitting with a patient day and night",
-                         "Not taking a step away",
-                         "What low cunning",
-                         "Half-dead to amuse",
-                         "To fix his pillows",
-                         "It's sad to bring medicine",
-                         "Sigh and think to yourself",
-                         "When the devil will take you",
-                         };
+    const int n_str = 5256;
+    
+    char text[n_str][150] = {};    
 
-    char* n_sent[14] = {};
+    for (int yu = 0; yu < n_str; yu++)
+        {
+        scanf ("%[^\n]", text[yu]);
+        getchar();
+        }
 
-    for (int w = 0; w < 14; w++)
+    char* n_sent[n_str] = {};
+
+    for (int w = 0; w < n_str; w++)
         n_sent[w] = (char*) (text + w);
 
-    for (int i = 0; i < 14; i++)
+    for (int i = 0; i < n_str; i++)
     {
-        for (int j = 0; j < 13; j++)
+        for (int j = 0; j < n_str-1; j++)
         {
             if (CompareStr ((char*) n_sent[j], (char*) n_sent[j+1]) == 0)
                 {
@@ -38,8 +33,7 @@ int main()
                 }
         }
     }
-
-    for (int y = 0; y < 14; y++)
+    for (int y = 0; y < n_str; y++)
         puts (n_sent[y]);  
 }
 
@@ -50,15 +44,17 @@ int CompareStr(char* str_1, char* str_2)
     {
         if (isalpha (str_1[i]) and isalpha (str_2[i]))
             {
-                if (str_1[i] > str_2[i])
+                if (tolower(str_1[i]) > tolower(str_2[i]))
                     return 0;
-                else if (str_1[i] < str_2[i])
+                else if (tolower(str_1[i]) < tolower(str_2[i]))
                     return 1;
             }
         i++;
     }
     return -1;
 }
+
+    
 
 
 
