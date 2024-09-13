@@ -10,10 +10,10 @@ int CompareStr (char* str_1, char* str_2)
     {
         if (isalpha (str_1[i]) and isalpha (str_2[i]))
             {
-                if (tolower(str_1[i]) > tolower(str_2[i]))
-                    return 0;
-                else if (tolower(str_1[i]) < tolower(str_2[i]))
+                if (tolower(str_1[i]) < tolower(str_2[i]))
                     return 1;
+                else if (tolower(str_1[i]) > tolower(str_2[i]))
+                    return 0;
             }
         i++;
     }

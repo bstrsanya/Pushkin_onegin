@@ -1,40 +1,83 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <locale.h>
+#include <assert.h>
+#include <sys/stat.h>
+#include <stdlib.h>
+
 
 #include "./CompareStr.h"
 #include "./SortStr.h"
 
-const int n_str = 5263;
 int main()
 {
-    FILE *file = fopen("URA.txt", "r");
-    char text[n_str][150] = {};    
+    struct stat info;
+    FILE *file = fopen("URA.txt", "rb");
 
-    for (int yu = 0; yu < n_str; yu++)
+    assert (file != NULL); //определить размер fseek ftell rewind make-file
+    assert (fstat (fileno(file), &info) != -1);
+
+    char* all_text = (char*) (calloc ((info.st_size / sizeof (char)) + 1, sizeof (char)));
+
+    fread (all_text, info.st_size, sizeof (char), file);
+    assert (all_text != NULL);
+
+    int n_strock = 1;
+    int i = 0;
+    while (all_text[i] != '\0')
         {
-        fscanf (file, "%[^\n]", text[yu]);
-        fgetc(file);
+        n_strock += (all_text[i] == '\n');
+        i++;
         }
 
-    char* n_sent[n_str] = {};
+    char** addr_strock = (char**) (calloc (n_strock, sizeof (char*)));
 
-    for (int w = 0; w < n_str; w++)
-        n_sent[w] = (char*) (text + w);
+    addr_strock[0] = all_text;
 
-    SortStr (&n_sent[0]);
+    int j = 0;
+    int num_strock = 1;
+    while (all_text[j] != '\0')
+        {
+        if (all_text[j] == '\n')
+            {
+            addr_strock[num_strock] = all_text + j + 1;
+            num_strock++;
+            }
+        j++;
+        }
 
-    FILE *file2 = fopen ("./testura.txt", "w");
+    SortStr (addr_strock, num_strock);
 
-    for (int y = 0; y < n_str; y++)
+    assert (addr_strock != NULL);
+
+    for (int h = 0; h < n_strock; h++)
     {
-        fputs (n_sent[y], file2);
-        fputs ("\n", file2);
+        assert (addr_strock[h] != NULL);
     }
 
-    fclose (file2);  
-    fclose(file);
+    FILE *file_output = fopen ("testura.txt", "w");
+
+
+    assert (addr_strock[0] != NULL);
+    for (int i1 = 0; i1 < n_strock; i1++)
+    {
+        int i2 = 0;
+        while (addr_strock[i1][i2] != '\r')
+        {
+            fputc (addr_strock[i1][i2], file_output);
+            i2++;
+        }
+        fputc ('\n', file_output);
+    }
+    free (addr_strock); addr_strock = NULL;
+    free (all_text); all_text = NULL;
+        
+
 }
+
+
+
+
 
 
 
