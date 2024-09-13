@@ -8,45 +8,34 @@
 
 #include "./CompareStr.h"
 #include "./SortStr.h"
+#include "./CounterStr.h"
+#include "./AddrBeginLine.h"
+#include "./RecordFile.h"
 
 int main()
 {
-    struct stat info;
-    FILE *file = fopen("URA.txt", "rb");
+    // передача данных из файла в одномерный массив
+    FILE *file_input = fopen("Text_Onegin.txt", "rb");
+    assert (file_input != NULL); //определить размер fseek ftell rewind make-file
 
-    assert (file != NULL); //определить размер fseek ftell rewind make-file
-    assert (fstat (fileno(file), &info) != -1);
+    fseek (file_input, 0, SEEK_END);
+    size_t file_size = ftell (file_input);
+    rewind (file_input);
 
-    char* all_text = (char*) (calloc ((info.st_size / sizeof (char)) + 1, sizeof (char)));
-
-    fread (all_text, info.st_size, sizeof (char), file);
+    char* all_text = (char*) (calloc ((file_size / sizeof (char)) + 1, sizeof (char)));
+    fread (all_text, file_size, sizeof (char), file_input);
+    fclose (file_input);
     assert (all_text != NULL);
+    //
 
-    int n_strock = 1;
-    int i = 0;
-    while (all_text[i] != '\0')
-        {
-        n_strock += (all_text[i] == '\n');
-        i++;
-        }
+    int n_strock = CounterStr (all_text); // подсчет количества строк в тексте
 
     char** addr_strock = (char**) (calloc (n_strock, sizeof (char*)));
-
     addr_strock[0] = all_text;
 
-    int j = 0;
-    int num_strock = 1;
-    while (all_text[j] != '\0')
-        {
-        if (all_text[j] == '\n')
-            {
-            addr_strock[num_strock] = all_text + j + 1;
-            num_strock++;
-            }
-        j++;
-        }
+    AddrBeginLine (all_text, addr_strock); // добавление в массив адресов адрес начала каждой строки    
 
-    SortStr (addr_strock, num_strock);
+    SortStr (addr_strock, n_strock); // сортировка строк
 
     assert (addr_strock != NULL);
 
@@ -55,24 +44,10 @@ int main()
         assert (addr_strock[h] != NULL);
     }
 
-    FILE *file_output = fopen ("testura.txt", "w");
-
-
-    assert (addr_strock[0] != NULL);
-    for (int i1 = 0; i1 < n_strock; i1++)
-    {
-        int i2 = 0;
-        while (addr_strock[i1][i2] != '\r')
-        {
-            fputc (addr_strock[i1][i2], file_output);
-            i2++;
-        }
-        fputc ('\n', file_output);
-    }
+    RecordFile (addr_strock, n_strock);
+    
     free (addr_strock); addr_strock = NULL;
     free (all_text); all_text = NULL;
-        
-
 }
 
 
