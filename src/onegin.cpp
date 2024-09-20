@@ -4,65 +4,54 @@
 
 #include "Onegin.h"
 
-int main()
+
+int main(int argc, char ** argv)
 {
-    FILE *file_input = fopen("Text_Onegin.txt", "rb");
-    assert (file_input != NULL);
-    
-    // получение массива, который содержит данные из файла
-    char* all_text = ReadFile (file_input);     
-    
-    fclose (file_input);
-    assert (all_text != NULL);
+    // открытие файла для чтения
+    FILE *file_input = fopen (argv[1], "rb");
+    if (file_input == NULL) printf ("OPEN FILE ERROR");
+
+    // получение массива, который содержит данные из файла и размера файла
+    size_t file_size = 0;
+    char* all_text = ReadFile (file_input, &file_size);
+    assert (all_text != 0);
+
+    fclose (file_input); 
 
     // подсчет количества строк в тексте
-    int n_strock = CounterStr (all_text); 
+    int n_strock = CounterStr (all_text, file_size, '\n'); 
+    assert (n_strock != 0);
 
-    // создание массива, для хранения указателей на каждую строку текста
-    char** addr_strock = (char**) (calloc (n_strock, sizeof (char*)));
-    addr_strock[0] = all_text;
+    // создание массива структур, для хранения указателей на каждую строку текста и ее размера
+    data_str *data = (data_str *) calloc (n_strock + 1, SIZE_STRUCT_DATA_STR);
+    assert (data != 0);
+    
+    ComplationStruct ((data_str*) data, all_text, file_size);   
 
-    // добавление в массив адресов адрес начала каждой строки
-    AddrBeginLine (all_text, addr_strock);     
-
-    FILE *file_output = fopen ("Sort_Text_Onegin.txt", "w");
-    assert (file_output != NULL);
+    //открытие файла для записи
+    FILE *file_output = fopen (argv[2], "wb");
+    if (file_output == NULL) printf ("OPEN FILE ERROR");
 
     //вывод оригинального текста
     fputs ("\nONEGIN'S ORIGINAL TEXT\n\n", file_output);
-    RecordFile (file_output ,addr_strock, n_strock);
+    WriteFile (file_output , data, n_strock);
 
-    // сортировка строк с начала
-    SortStr (addr_strock, n_strock, CompareStrBegin); 
-    assert (addr_strock != NULL);
-    // вывод острортированного с начала текста в файл
+    //сортировка строк с начала
+    SortStr (data, n_strock, CompareStrBegin); 
+
+    //вывод острортированного с начала текста в файл
     fputs ("\nTHE TEXT IS SORTED FROM THE BEGINNING\n\n", file_output);
-    RecordFile (file_output ,addr_strock, n_strock);
+    WriteFile (file_output, data, n_strock);
 
-    // сортировка строк с конца
-    SortStr (addr_strock, n_strock, CompareStrEnd); 
-    assert (addr_strock != NULL);
-    // вывод острортированного с конца текста в файл
+    //сортировка строк с конца
+    SortStr (data, n_strock, CompareStrEnd); 
+
+    //вывод острортированного с конца текста в файл
     fputs ("\nTHE TEXT IS SORTED FROM THE END\n\n", file_output);
-    RecordFile (file_output ,addr_strock, n_strock);
+    WriteFile (file_output, data, n_strock);
 
     fclose (file_output);
 
-    free (addr_strock); addr_strock = NULL;
     free (all_text); all_text = NULL;
-}
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
+    free (data); data = NULL;
+}    

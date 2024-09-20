@@ -34,7 +34,7 @@ Eugene was saved by fate's decision:
 Madame took on his supervision,
 Then to Monsieur passed on her trust.
 The child had charm, though boisterous.
-Monsieur l'Abb&#233;, a threadbare Frenchman,
+Monsieur l', a threadbare Frenchman,
 Made light of everything he taught
 For fear of getting Eugene fraught;
 Of stern morality no henchman,
@@ -154,7 +154,7 @@ His dinner and adoring wife
 Sometimes, when still in bed he drowses,
 Notelets are brought to greet the day -
 What? Invitations? Yes, three houses
-Inviting him to a soir&#233;e:
+Inviting him to a e:
 A ball here, there a children's evening,
 For which will my young scamp be leaving?
 With which begin? It matters not:
@@ -163,7 +163,7 @@ Meanwhile, apparelled for the morning
 And, donning a broad bolivar,
 Onegin to the boulevard
 Drives out and strolls, at leisure swanning,
-Until Br&#233;guet with watchful chime
+Until guet with watchful chime
 Rings out that it is dinner time.
 It's dark: into a sleigh he settles.
 The cry resounds:  Away, away';
@@ -181,7 +181,7 @@ Between a golden ananas
 And Limburg cheese's living mass.
 Thirst still replenishes the beakers
 To down hot cutlets one by one,
-But Br&#233;guet tells the pleasure seekers
+But guet tells the pleasure seekers
 Of a new ballet that's begun.
 The theatre's heartless legislator,
 Fickle adorer and spectator
@@ -191,7 +191,7 @@ Onegin flies off to the theatre,
 Where liberty's admirers are
 Prepared to clap an entrechat,
 To hiss off Cleopatra, Phaedra,
-Call for Mo&#235;na in a word,
+Call for na in a word,
 Make sure their voices can be heard.
 Enchanting world! There shone Fonvizin,
 Bold king of the satiric scene,
@@ -801,7 +801,7 @@ At first, our Eugene made provisions
 To introduce a new regime.
 A sage in rural isolation,
 He eased the peasant yoke, replacing
-The old corv&#233;e with light quit-rent;
+The old e with light quit-rent;
 The serf blessed fate for what it sent.
 But Eugene's thrifty neighbour, flurried,
 Sat sulking; in his corner he
@@ -828,7 +828,7 @@ Had driven down to his estate
 And offered equal cause for comment
 And stringent neighbourhood debate.
 By name Vladimir Lensky, wholly
-Endowed with G&#246;ttingenian soul, he
+Endowed with ttingenian soul, he
 Was handsome, in his youthful prime,
 A devotee of Kant and rhyme.
 He brought with him the fruits of learning
@@ -1313,7 +1313,7 @@ And saves my volatile creations,
 Whose hand, that favours my renown,
 Will pat the old man's laurel crown!
 Where do you spend your evenings?'  Why,
-I see the L&#225;irins.'  That's amazing.
+I see the irins.'  That's amazing.
 Mercy, does it not drive you crazy
 To murder every evening thus?'
 Not in the least.'  I am nonplussed.
@@ -1735,13 +1735,13 @@ A captivating, harmful mixture?
 I cannot tell. But now you'll meet
 My version, feeble, incomplete,
 Pale copy of a vivid picture,
-Or as Der Freisch&#252;tz might be played
+Or as Der Freischtz might be played
 By girlish pupils, still afraid.
 Tatiana's Letter to Onegin
 I write to you - what more is needed?
 What else is there that I could say?
 It's in your power, I concede it,
-To punish my naivet&#233;.
+To punish my naivet;.
 But if you've even slightly pitied
 The dismal lot that I endure,
 You won't abandon me, I'm sure.
@@ -1791,7 +1791,7 @@ Each time I prayed in hope of cheering
 The anguish of my troubled heart?
 And even at this very second,
 Wasn't it you, dear vision, beckoned
-And slipped through night's transparency,
+And slipped through night's transparency
 Inclining gently at my bedhead,
 You, who with joy and love persuaded
 And whispered words of hope to me?
@@ -1879,7 +1879,7 @@ Since morning dressed, pale as a spectre,
 Tatiana waits for a reply.
 Olga's adorer drove up.  Tell us,
 Where's your companion?' came the zealous
-Inquiry from the ch&#226;telaine.
+Inquiry from thetelaine.
 He has forgotten us, that's plain.'
 Tatiana trembled, flushed, uneasy.
 He promised that today he'd come.'
@@ -1903,7 +1903,7 @@ In windowpane calligraphy,
 A monogram: an O and E.
 And, meanwhile, still her soul is aching,
 And tears have filled her languid gaze.
-A thud of hoofs!  Her blood is shaking.
+A thud of hoofs!  Her blood is shaking
 Closer! Into the yard they race.
 Eugene! Tatiana, lighter than a
 Shadow, is leaping through the manor,
@@ -2115,7 +2115,7 @@ Heaven no doubt has ruled it so.
 You'll fall in love again, I know,
 But  learn to govern your confessions;
 Not all, like me, will understand,
-Naivet&#233; risks a dangerous end.'
+Naivet; risks a dangerous end.'
 Thus Eugene preached. Tatiana, crying,
 Saw nothing through her tears, but she,
 Scarce breathing and without replying,
@@ -2279,8 +2279,8 @@ Unmetered verses, by tradition,
 In shortened or in lengthened line
 Betoken friendship's loyal sign.
 Upon the first leaf you'll be meeting
-Qu'&#233;crirez-vous sur ces tablettes?
-And signed with toute &#224; vous, Annette;
+Qucrirez-vous sur ces tablettes?
+And signed with toute vous, Annette;
 And on the last you will be reading:
 Whoever loves you more than I,
 Let them append here how and why.
@@ -2479,7 +2479,7 @@ Before the fire a table's laid,
 Onegin waits: here's Lensky, splendid!
 A troika of roan horses wheel
 Into the yard - quick, start the meal!
-At once, a Veuve Cliquot or Mo&#235;t,
+At once, a Veuve Cliquot or Mot,
 That most revered and blessed wine,
 Is brought to table for the poet,
 In a chilled bottle, as they dine.
@@ -2704,7 +2704,7 @@ The sound of reed pipe gently played on:
 What is your name?' He looks; anon
 He answers: it is Agafon.
 Instructed by her nurse, Tatiana
-Arranged a s&#233;ance all night through;
+Arranged a ance all night through;
 And in the bathhouse of the manor
 Ordered a table laid for two.
 But sudden fear assailed Tatiana 
@@ -2948,7 +2948,7 @@ In reddish wig, bespectacled.
 Triquet, in truly Gallic manner,
 Had brought a stanza for Tatiana,
 Set to a children's melody:
-R&#233;veillez-vous, belle endormie.
+veillez-vous, belle endormie.
 This stanza saw its publication
 In a decrepit almanac;
 Triquet, a poet with a knack,
@@ -3033,7 +3033,7 @@ Stands up; and all the guests before him
 Are still. Unable to ignore him,
 Tatiana's scarce alive; Triquet,
 Holding a paper, turns her way
-And starts his song, off-key. He's f&#234;ted
+And starts his song, off-key. He's ted
 With shouts and calls, the guests clap hard,
 She owes a curtsey to the bard;
 The poet, great but underrated,
@@ -3074,7 +3074,7 @@ Now tea is served. We hear no chimes:
 I like to time repasts at leisure
 With dinner, supper, tea my measure.
 We countryfolk make little fuss
-Without Br&#233;guet to govern us:
+Without guet to govern us:
 Our stomach is our faultless timer;
 And, by the way, I like to talk
 As much of dishes, feasts and cork,
@@ -3234,7 +3234,7 @@ Surrendered to a Gallic squad,
 A modern Regulus, honour's god,
 Prepared to yield again to bondage,
 To drain on credit two or three
-Carafes each morning chez V&#233;ry.
+Carafes each morning chez 
 To tease was once his recreation,
 He'd dupe a fool or stupefy
 A man of educated station,
@@ -4496,7 +4496,7 @@ There, done! Enough! No more diversions!
 Thus, classicism I placate:
 An Introduction's here, though late.
 In those far days, serene and careless,
-The lyc&#233;e's gardens saw me grow,
+The e's gardens saw me grow,
 I read with pleasure Apuleius
 And disregarded Cicero,
 In those far days, in dales mysterious,
@@ -4506,7 +4506,7 @@ The Muse began to visit me.
 My student cell was inundated
 With sudden light. She brought me there
 A youthful feast, a merry fare
-Of fancies that in song she f&#234;ted,
+Of fancies that in song she ted,
 Sang, too, our glorious, ancient themes,
 Sang of the heart that stirs our dreams.
 And with a smile my Muse was greeted;
@@ -4754,7 +4754,7 @@ Eugene remained there, motionless.
 Could it be she, the same Tatiana,
 The very maiden he once met
 In that remote and distant corner
-And preached to in a t&#234;te-&#224;-t&#234;te
+And preached to in a te
 With loftiness and exhortation,
 When we embarked on our narration,
 Was hers the letter he'd preserved,
@@ -4771,7 +4771,7 @@ His tardy sleep is worried by
 A dream, now sad, now full of charm,
 He wakes; an invitation's brought;
 His presence by Prince N is sought
-At a soir&#233;e.  My God, to her!
+At a e.  My God, to her!
 I will, I will, without demur!
 He scrawls a courteous  Yes, I'll be there.'
 What's happening? In what strange dream
@@ -4794,7 +4794,7 @@ A fixed idea he keeps on mulling.
 And fixedly he looks, while she
 Sits calmly and at liberty.
 Her husband enters, interrupting
-This most unpleasant t&#234;te-&#224;-t&#234;te,
+This most unpleasant 
 And joins Onegin in recapturing
 Pranks, jokes enjoyed, when first they met.
 They laugh together. Guests now enter
@@ -5018,7 +5018,7 @@ And seized him by the collar, then
 Enclosed him in his gloomy den.
 He read again, but all at random:
 Manzoni, Gibbon and Rousseau,
-Madame de Sta&#235;l, Chamfort in tandem,
+Madame de, Chamfort in tandem,
 Bichat and Herder and Tissot.
 He read the sceptic Bayle,who led him
 To Fontenelle, and when he'd read him,
@@ -5173,7 +5173,7 @@ Can you be paltry feeling's slave?
 This pomp, Onegin, these excesses,
 The trumpery of hateful days,
 My high society successes,
-My fashionable house, soir&#233;es,
+My fashionable house, es,
 What do they mean? Oh, I'd surrender
 At once this masquerade, this splendour,
 With all its glitter, noise and smoke

@@ -5,8 +5,9 @@
 #include "CompareStrEnd.h"
 #include "SortStr.h"
 #include "CounterStr.h"
-#include "AddrBeginLine.h"
-#include "RecordFile.h"
+#include "WriteFile.h"
 #include "ReadFile.h"
+#include "ComplationStruct.h"
+
 
 #endif // Onegin_H

@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-char* ReadFile (FILE* file_input);
+char* ReadFile (FILE* file_input, size_t* file_size);
 
 #endif

@@ -1,2 +1,0 @@
-all:
-	g++ onegin.cpp CompareStr.cpp SortStr.cpp CounterStr.cpp AddrBeginLine.cpp RecordFile.cpp -o main

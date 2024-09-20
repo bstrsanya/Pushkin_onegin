@@ -1,13 +1,24 @@
-#include "ReadFile.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
-char* ReadFile (FILE* file_input)
+#include "ReadFile.h"
+#include "SizeFile.h"
+
+char* ReadFile (FILE* file_input, size_t* file_size)
 {
-    fseek (file_input, 0, SEEK_END);
-    size_t file_size = ftell (file_input);
-    rewind (file_input);
-    char* all_text = (char*) (calloc ((file_size / sizeof (char)) + 1, sizeof (char)));
-    fread (all_text, file_size, sizeof (char), file_input);
+    assert (file_input != NULL);
+    assert (file_size != 0);
+
+    *file_size = SizeFile (file_input);
+
+    char* all_text = (char*) calloc (*file_size + 1, sizeof (char));
+    assert (all_text != NULL);
+
+    size_t n_fread = fread (all_text, sizeof (char), *file_size, file_input);
+
+    if (n_fread != *file_size) printf ("ERROR READ FILE");
+    
     return all_text;
 }
+

@@ -1,17 +1,18 @@
+#include <assert.h>
+
 #include "CounterStr.h"
 
-/**     
- * @brief func - jhsjkfhksdj
- * @return  kfkjdl
- */
-int CounterStr (char* all_text)
+int CounterStr (char* all_text, size_t file_size, char c_check)
 {
-    int n_strock = 1;
-    int i = 0;
-    while (all_text[i] != '\0')
+    assert (all_text != NULL);
+    assert (file_size != 0);
+
+    size_t n_strock = 0;
+    size_t index = 0;
+    while (index < file_size)
         {
-        n_strock += (all_text[i] == '\n');
-        i++;
+        n_strock += (all_text[index] == c_check);
+        index++;
         }
     return n_strock;
 }
